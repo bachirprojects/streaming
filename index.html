@@ -1,0 +1,79 @@
+
+<!--
+	This file is rendered by express.js, when the rurl /chat/123456 is visited in a browser.
+	It includes jQuery, socket.io.js (it is automatically served by the socket.io library), 
+	and a few more JavaScript files that you should check out.
+-->
+
+<html>
+
+<head>
+
+	<title>Bachir chat room | Bachir Demo</title>
+
+	<link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
+
+</head>
+
+<body>
+
+	<header class="banner">
+
+		<h1 class="bannertext">
+			<a  id="logo">Just Ici <span> pour </span>: Communiquer!</a>
+		</h1>
+
+	</header>
+
+
+	<section class="section" >
+
+		<!-- These elements are displayed as white info cards in the middle of the screen -->
+
+		<div class="connected">
+
+			<img src="img/unnamed.jpg" id="creatorImage" />
+
+			<div class="infoConnected">
+				<h2>Vous etes Qui?</h2>
+				<br/>
+
+				<form class="loginForm">
+					<input type="text" id="yourName" placeholder="Votre Nom ..." /><br/>
+					<input type="text" id="yourEmail" placeholder="Votre Email ..." /><br/>
+					<input type="submit" id="yourEnter" value="ENTER" />
+				</form>
+
+			</div>
+
+		</div>
+
+		
+
+		<div class="chatscreen" style="display:none;">
+
+			<ul id="chats">
+				<!-- The chat messages will go here -->
+				
+			</ul>
+
+		</div>
+
+	</section>
+
+	<footer style="display:none;">
+
+		<form id="chatform" method="post">
+
+			<textarea id="message" placeholder="Ecrire Quelque chose..."></textarea>
+			<input type="submit" id="submit" value="ENVOYER"/>
+
+		</form>
+
+	</footer>
+	
+<script src="js/jquery.js"></script>
+<script src="http://bachir-best:1337/socket.io/socket.io.js"></script>
+<script src="js/client.js"></script>
+</body>
+</html>
